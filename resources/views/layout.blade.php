@@ -32,7 +32,7 @@ Released   : 20140225
                 <li class="{{ Request::path() === 'welcome' ? 'current_page_item' : '' }}"><a href="/welcome" accesskey="1" title="">Homepage</a></li>
                 <li class="{{Request::path() === 'clients' ? 'current_page_item' : ''}}"><a href="#" accesskey="2" title="">Our Clients</a></li>
                 <li class="{{Request::is('about') ? 'current_page_item' : ''}}"><a href="/about" accesskey="3" title="">About Us</a></li>
-                <li class="{{Request::path() === 'careers' ? 'current_page_item' : ''}}"><a href="#" accesskey="4" title="">Careers</a></li>
+                <li class="{{Request::path() === 'articles/{article}' ? 'current_page_item' : ''}}"><a href="articles/{article}" accesskey="4" title="">Articles</a></li>
                 <li class="{{Request::path() === 'contact-us' ? 'current_page_item' : ''}}"><a href="#" accesskey="5" title="">Contact Us</a></li>
             </ul>
         </div>
