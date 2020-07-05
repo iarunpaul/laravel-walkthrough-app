@@ -20,8 +20,7 @@ Released   : 20140225
     <link href="/css/default.css" rel="stylesheet" type="text/css" media="all" />
     <link href="/css/fonts.css" rel="stylesheet" type="text/css" media="all" />
     <link rel="stylesheet" type="text/css" href="{{mix('css/app.css')}}">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
-
+    @yield ('head')
 </head>
 <div id="header-wrapper">
     <div id="header" class="container">
