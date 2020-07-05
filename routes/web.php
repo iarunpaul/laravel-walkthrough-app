@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/welcome', function () {
+Route::get('/', function () {
 
     return view('welcome');
 });
@@ -26,11 +26,19 @@ Route::get('/about', function () {
 
 Route::get('/articles/{article}', 'ArticlesController@show');
 
+Route::get('articles', 'ArticlesController@index');
+
+/*Route::get('articles', function (){
+	$articles = App\Article::paginate(2);
+	dd($articles);
+});
+*/
+
 Route::get('/test', function () {
 
 	$name = request('name');
 	return view('test', [
-	 'name' => $name
+	 'nam' => $name
 		]);
 });
 
@@ -42,9 +50,10 @@ Route::get('/test', function () {
 	if ( ! array_key_exists($post, $posts)) {
 		abort(404, 'Sorry the requested page does not exist!');
 	};
-	return view('post', [
-		'post' => $posts[$post]
-	]);
-});
-*/
+	dd($posts[$post]);
+	// return view('post', [
+		// 'post' => $posts[$post]
+	// ]);
+});*/
+
 Route::get('/post/{post}', 'PostsController@show');
