@@ -8,16 +8,28 @@ use App\Article;
 
 class ArticlesController extends Controller
 {
+    public function index()
+    {
+    	$articles = Article::latest()->get();
+    	return view('articles.index', ['articles' => $articles]);
+    }
+
     public function show($Id)
     {
     	$article = Article::find($Id);
     	return view('articles.show', ['article' => $article]);
     }
 
-    public function index()
+    public function create()
     {
-    	$articles = Article::latest()->get();
-    	return view('articles.index', ['articles' => $articles]);
+    	return view('articles.create');
     }
+
+    public function store()
+    {
+    	dump(request()->all());
+    }
+
+
 }
 

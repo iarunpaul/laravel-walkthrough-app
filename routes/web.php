@@ -24,9 +24,15 @@ Route::get('/about', function () {
     return view('about', ['articles' => $articles]);
 });
 
+Route::get('/articles/create', 'ArticlesController@create');
+
+Route::post('articles', 'ArticlesController@store');
+
 Route::get('/articles/{article}', 'ArticlesController@show');
 
 Route::get('articles', 'ArticlesController@index');
+
+
 
 /*Route::get('articles', function (){
 	$articles = App\Article::paginate(2);
