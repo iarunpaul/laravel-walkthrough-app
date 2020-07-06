@@ -32,7 +32,7 @@ Route::get('/articles/{article}/edit', 'ArticlesController@edit');
 
 Route::put('articles/{article}', 'ArticlesController@update');
 
-Route::get('/articles/{article}', 'ArticlesController@show');
+Route::get('/articles/{article}', 'ArticlesController@show')->name('articles.show');
 
 Route::get('articles', 'ArticlesController@index');
 
