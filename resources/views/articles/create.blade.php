@@ -15,48 +15,47 @@
 					<form method="POST" action="/articles">
 						@csrf
 						<div class="field">
-						  <label class="label" for="Title">Title</label>
+						  <label class="label" for="title">Title</label>
 						  <div class="control">
 						    <input
-						    class="input @error('Title') is-danger @enderror "
+						    class="input @error('title') is-danger @enderror "
 						    type="text"
-						    placeholder="Title"
-						    name="Title"
-						    id="Title"
-						    value="{{old('Title')}}">
+						    placeholder="title"
+						    name="title"
+						    id="title"
+						    value="{{old('title')}}">
 						  </div>
-						  @error('Title')
-						  	<p class="help is-danger">{{$errors->first('Title')}}</p>
+						  @error('title')
+						  	<p class="help is-danger">{{$errors->first('title')}}</p>
 						  @enderror
 						</div>
 
 						<div class="field">
-						  <label class="label" for="Excerpt">Excerpt</label>
+						  <label class="label" for="excerpt">Excerpt</label>
 						  <div class="control">
 						    <textarea
-						    class="textarea @error('Excerpt') is-danger @enderror"
-						    name="Excerpt"
-						    id="Excerpt">
-							{{old('Excerpt')}}
+						    class="textarea @error('excerpt') is-danger @enderror"
+						    name="excerpt"
+						    id="excerpt">
+							{{old('excerpt')}}
 							</textarea>
-						    @error('Excerpt')
-						  	<p class="help is-danger">{{$errors->first('Excerpt')}}</p>
+						    @error('excerpt')
+						  	<p class="help is-danger">{{$errors->first('excerpt')}}</p>
 						  @enderror
 						  </div>
 						</div>
 
 						<div class="field">
-						  <label class="label" for="Body">Body</label>
+						  <label class="label" for="body">Body</label>
 						  <div class="control">
 						    <textarea
-						    class="textarea @error('Body') is-danger @enderror"
-						    placeholder="Body"
-						    name="Body"
-						    id="Body">
-						    {{old('Body')}}
+						    class="textarea @error('body') is-danger @enderror"
+						    name="body"
+						    id="body">
+						    {{old('body')}}
 						    </textarea>
-						    @error('Body')
-						  	<p class="help is-danger">{{$errors->first('Body')}}</p>
+						    @error('body')
+						  	<p class="help is-danger">{{$errors->first('body')}}</p>
 						  @enderror
 						  </div>
 						</div>
